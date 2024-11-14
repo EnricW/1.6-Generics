@@ -2,18 +2,12 @@ package level1.exercise2;
 
 public class Main {
     public static void main(String[] args) {
-        // Crear una instància de Persona
-        Persona persona = new Persona("Joan", "Pérez", 30);
+        Person person = new Person("Lamine", "Yamal", 17);
 
-        // Crear una instància de GenericMethods
         GenericMethods genericMethods = new GenericMethods();
 
-        // Cridar el mètode genèric amb diferents tipus de paràmetres
+        genericMethods.printArguments(person, "Text", 22);
 
-        // Exemple amb Persona, String i int
-        genericMethods.imprimirArguments(persona, "Hola món", 42);
-
-        // Exemple amb String, int i Persona (ordre canviat)
-        genericMethods.imprimirArguments("Salutacions!", 25, new Persona("Maria", "López", 28));
+        genericMethods.printArguments("Hello!", 25, new Person("Pau", "Cubarsí", 17));
     }
 }
